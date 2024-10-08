@@ -18,7 +18,7 @@ body{
     grid-template:repeat(4,75px) / repeat(5,100px)
 }
 
-.container button{
+.container div{
   font-size: 30px;
   display: flex;
   justify-content: center;
