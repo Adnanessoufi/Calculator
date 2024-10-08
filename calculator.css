@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body{
+      background-color: black;
+       width: 100%;
+       height:100%;
+       margin:0;
+}
+
+.container{
+    display: grid;
+    gap: 7px;
+    padding:30px;
+    height:75%;
+    grid-template:repeat(4,75px) / repeat(5,100px)
+}
+
+.container button{
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #646464;
+  border-radius: 20px;
+  
+}
+
+.container .equal{
+  grid-column: 4/6;
+  padding-bottom:auto;
+  background-color: #A1ADFF;
+}
+
+.container .deleteAll{
+  background-color: #FF9A00;
+}
+
+.screen div{
+  height: 30%;
+  width:30%;
+  color:red;
+  padding:5px;
+  margin:10px;
+}
+
+
