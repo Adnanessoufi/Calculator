@@ -3,6 +3,48 @@
   text-align: center;
 }
 
+button{
+  position:absolute;
+  color:#646464;
+  background-color: white;
+  font-size: 16px;
+  Top:10px;
+  width:110px;
+  flex-wrap: wrap;
+  left:0px;
+  word-wrap: break-word;
+  border-radius: 40%;
+
+}
+
+.container.night .equal{
+  background-color: rgb(78, 90, 168);
+}
+
+.container.night .deleteAll{
+  background-color: rgb(245, 199, 126);
+}
+
+
+.container.night div{
+  color: black;
+  background-color: white;
+}
+
+button.night{
+  color: white;
+  background-color : rgb(163, 159, 159);
+  border-color: white;
+}
+
+body.night{
+  background-color : rgb(234, 233, 233)
+}
+
+.screen.night div{
+  color:rgb(28, 27, 27);
+}
+
 body{
     display: flex;
     flex-direction: column;

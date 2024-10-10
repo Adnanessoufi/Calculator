@@ -1,4 +1,5 @@
 const statement  = document.querySelector('.statement')
+const screen = document.querySelector('.screen')
 const result = document.querySelector('.result')
 const numbers = document.querySelectorAll('.numbers')
 const operations = document.querySelectorAll('.operation')
@@ -7,17 +8,37 @@ const deleteAll = document.querySelector('.deleteAll')
 const deleteIcon = document.querySelector('.delete')
 const point = document.querySelector('.point')
 const negative = document.querySelector('.negative')
+const buttonLight = document.querySelector('button')
+const body = document.querySelector('body')
+const container = document.querySelector('.container')
 let equalSign = false
 let operator = false
 let firstCar = true
+let night = false
 
+buttonLight.addEventListener('click',(e)=>{
+  if (night){
+    buttonLight.textContent = "Turn On Dark Mode"
+    night = false
+  } else{
+  buttonLight.textContent = "Turn On Light Mode"
+    night = true
+  }
+  screen.classList.toggle("night")
+  equal.classList.toggle("night")
+  body.classList.toggle("night")
+  buttonLight.classList.toggle("night")
+  deleteAll.classList.toggle("night")
+  container.classList.toggle("night")
+  equal.classList.toggle("night")
+})
 
 negative.addEventListener('click',()=>{
   if(equalSign){
     result.textContent = ''
     statement.textContent = ''
     equalSign = false 
-    firstCar = false
+    firstCar = true
     operator = false
   }
 
@@ -56,6 +77,8 @@ deleteAll.addEventListener('click',()=>{
   firstCar = true
 })
 
+
+
 numbers.forEach((number)=>number.addEventListener('click',(e)=>{
   if(equalSign){
     result.textContent = ''
@@ -75,7 +98,6 @@ operations.forEach((operation)=>operation.addEventListener('click',(e)=>{
       result.textContent = ''
       equalSign = false
      }
-
     statement.textContent += " " + e.target.innerText + " "
     operator = true  
 }else if(operator===true){
