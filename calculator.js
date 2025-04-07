@@ -18,10 +18,10 @@ let night = false
 
 buttonLight.addEventListener('click',(e)=>{
   if (night){
-    buttonLight.textContent = "Turn On Dark Mode"
+    buttonLight.textContent = "Turn On Light Mode"
     night = false
   } else{
-  buttonLight.textContent = "Turn On Light Mode"
+  buttonLight.textContent = "Turn On Dark Mode"
     night = true
   }
   screen.classList.toggle("night")
@@ -63,7 +63,7 @@ deleteIcon.addEventListener('click',()=>{
 })
 
 point.addEventListener('click',(e)=>{
-  if (operator){
+  if (operator || firstCar){
     statement.textContent += '0'
   }
   statement.textContent += e.target.innerText
